@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
-  args: ['-c', './run_query.sh my_query.sql']
+  args: ['-c', '/home/muni_gcp_usr/big_query/run_query.sh my_query.sql']
   env:
   - 'PROJECT=challenge-lab-gce-288208'
