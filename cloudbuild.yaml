@@ -1,4 +1,5 @@
 steps:
-- name: gcr.io/cloud-builders/gcloud
+- name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
-  args: ['run_query.sh', 'my_query.sql']
+  dir: '/home/muni_gcp_usr/big_query'
+  args: ['-c', 'bq --project_id=challenge-lab-gce-288208 query --use_legacy_sql=false < ./my_query.sql']
