@@ -1,8 +1,4 @@
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
-  volumes:
-    path: '/persistent_volume'
   entrypoint: 'bash'
-  args: ['-c', '/persistent_volume/run_query.sh my_query.sql']
-  env:
-  - 'PROJECT=challenge-lab-gce-288208'
+  args: ['-c', './run_query.sh my_query.sql']
